@@ -1,4 +1,4 @@
-import profilePhoto from "@/assets/portfolio.png";
+import profilePhoto from "@/assets/Portfolio.png";
 import { Code, Server, Database, Smartphone } from "lucide-react";
 
 export const AboutSection = () => {
