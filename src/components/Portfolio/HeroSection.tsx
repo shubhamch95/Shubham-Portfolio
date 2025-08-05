@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   const scrollToProjects = () => {
@@ -9,7 +10,6 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
@@ -17,14 +17,12 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-midnight/90 via-midnight/80 to-midnight/70"></div>
       </div>
       
-      {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-20 h-20 bg-secondary/20 rounded-full blur-xl animate-float"></div>
         <div className="absolute top-40 right-20 w-32 h-32 bg-secondary/10 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
         <div className="absolute bottom-40 left-20 w-24 h-24 bg-secondary/15 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 text-center px-4 md:px-8 max-w-5xl mx-auto">
         <div className="fade-in-up animate space-y-6">
           <div className="glass rounded-2xl p-8 md:p-12 backdrop-blur-lg">
@@ -37,7 +35,7 @@ export const HeroSection = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Hi, I'm <span className="text-secondary font-semibold">Shubham Chahal</span>, 
+              Hi, I'm <span className="text-secondary font-semibold">Shubham Choudhery</span>, 
               a passionate Full-Stack Developer specializing in MongoDB, Express.js, React, and Node.js. 
               I create modern, scalable web applications that deliver exceptional user experiences.
             </p>
@@ -53,13 +51,13 @@ export const HeroSection = () => {
               
               <div className="flex gap-4">
                 <Button variant="outline" size="icon" className="glass rounded-full p-3 hover:bg-secondary/20">
-                  <Github className="h-5 w-5" />
+                  <Link to={`https://github.com/shubhamch95`}><Github className="h-5 w-5" /></Link>
                 </Button>
                 <Button variant="outline" size="icon" className="glass rounded-full p-3 hover:bg-secondary/20">
-                  <Linkedin className="h-5 w-5" />
+                   <Link to={`https://www.linkedin.com/in/shubham-choudhery/`}> <Linkedin className="h-5 w-5" /></Link>
                 </Button>
                 <Button variant="outline" size="icon" className="glass rounded-full p-3 hover:bg-secondary/20">
-                  <Mail className="h-5 w-5" />
+                 <Link to={`mailto:shubhch3131@gmail.com`}>  <Mail className="h-5 w-5" /> </Link>
                 </Button>
               </div>
             </div>
@@ -67,7 +65,6 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <ArrowDown className="h-6 w-6 text-secondary" />
       </div>

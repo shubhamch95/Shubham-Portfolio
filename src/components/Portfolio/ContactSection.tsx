@@ -21,9 +21,7 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
-    // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
@@ -31,14 +29,14 @@ export const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "shubham.chahal@example.com",
-      href: "mailto:shubham.chahal@example.com"
+      value: "shubhch3131@gmail.com",
+      href: "mailto:shubhch3131@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210"
+      value: "+91 8439408625",
+      href: "tel:+918439408625"
     },
     {
       icon: MapPin,
@@ -52,19 +50,19 @@ export const ContactSection = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/shubhamchahal",
+      href: "https://github.com/shubhamch95",
       color: "hover:text-gray-600"
     },
     {
       icon: Linkedin,
       label: "LinkedIn", 
-      href: "https://linkedin.com/in/shubhamchahal",
+      href: "https://www.linkedin.com/in/shubham-choudhery/",
       color: "hover:text-blue-600"
     },
     {
       icon: Twitter,
       label: "Twitter",
-      href: "https://twitter.com/shubhamchahal",
+      href: "https://x.com/AsyncShubham",
       color: "hover:text-blue-400"
     }
   ];
@@ -82,7 +80,6 @@ export const ContactSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
           <div className="space-y-8 fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="glass-card">
               <h3 className="text-2xl font-poppins font-semibold mb-6 text-gradient">
@@ -110,7 +107,6 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="glass-card">
               <h4 className="font-semibold mb-4 text-foreground">Follow Me</h4>
               <div className="flex space-x-4">
@@ -130,7 +126,6 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="fade-in-up" style={{ animationDelay: '0.4s' }}>
             <form onSubmit={handleSubmit} className="glass-card space-y-6">
               <h3 className="text-2xl font-poppins font-semibold mb-6 text-gradient">
@@ -149,7 +144,6 @@ export const ContactSection = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     className="glass border-border focus:border-secondary"
-                    placeholder="John Doe"
                     required
                   />
                 </div>
@@ -164,7 +158,6 @@ export const ContactSection = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="glass border-border focus:border-secondary"
-                    placeholder="john@example.com"
                     required
                   />
                 </div>
@@ -181,7 +174,6 @@ export const ContactSection = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   className="glass border-border focus:border-secondary"
-                  placeholder="Project Discussion"
                   required
                 />
               </div>
@@ -196,7 +188,6 @@ export const ContactSection = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="glass border-border focus:border-secondary min-h-[120px]"
-                  placeholder="Tell me about your project or just say hello!"
                   required
                 />
               </div>

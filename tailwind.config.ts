@@ -29,7 +29,6 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				
-				// Premium color palette
 				midnight: {
 					DEFAULT: 'hsl(var(--midnight))',
 					light: 'hsl(var(--midnight-light))',

@@ -1,45 +1,47 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Play } from "lucide-react";
+import Opinion from "@/assets/1.png"
+import RealTime from "@/assets/2.png"
+import EduSkill from "@/assets/eduskill.jpg"
+import JobImport from "@/assets/3.png"
 
 export const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React frontend, Node.js backend, MongoDB database, and Stripe payment integration. Features include user authentication, product management, shopping cart, and order tracking.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      githubUrl: "https://github.com/shubhamchahal/ecommerce-mern",
-      liveUrl: "https://ecommerce-demo.vercel.app",
+      title: "Opinion Trading App",
+      description: "Real-time sports trading application built with Node.js and Express.js. Features JWT authentication, admin panel for event management, WebSocket integration for live updates, and external sports API integration for live data. Includes role-based access control and secure trade execution.",
+      technologies: ["Node.js", "Express.js", "MongoDB", "WebSocket", "JWT", "The Odds API"],
+      image: Opinion,
+      githubUrl: "https://github.com/shubhamch95/Opinion-Trading-App",
       featured: true
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Collaborative task management application with real-time updates using Socket.io. Features drag-and-drop functionality, team collaboration, and progress tracking with beautiful UI/UX.",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB", "TypeScript"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      githubUrl: "https://github.com/shubhamchahal/task-manager",
-      liveUrl: "https://taskapp-demo.netlify.app",
+      title: "Real Time Polling System",
+      description: "Scalable polling platform using Node.js, PostgreSQL, Kafka, and WebSocket. Features user authentication, real-time vote tracking, leaderboard system with time-based filtering, and event-driven architecture. Includes comprehensive analytics and prevents duplicate voting.",
+      technologies: ["Node.js", "PostgreSQL", "Apache Kafka", "WebSocket", "Express.js"],
+      image: RealTime,
+      githubUrl: "https://github.com/shubhamch95/Real-Time-Polling-System",
       featured: true
     },
     {
       id: 3,
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management with data visualization, post scheduling, and engagement metrics. Built with modern React patterns and responsive design.",
-      technologies: ["React", "Chart.js", "REST API", "Tailwind CSS"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      githubUrl: "https://github.com/shubhamchahal/social-dashboard",
-      liveUrl: "https://social-dashboard-demo.vercel.app",
+      title: "EduUpSkills Website",
+      description: "Professional educational website with responsive design built using vanilla JavaScript (React via CDN) and Node.js backend. Features course specializations for LLB, BCA, BBA, MBA, and MCA programs, functional contact forms with PostgreSQL integration, and admin dashboard for lead management.",
+      technologies: ["JavaScript", "Node.js", "PostgreSQL", "Tailwind CSS", "Express.js"],
+      image: EduSkill,
+      githubUrl: "https://github.com/shubhamch95/eduUpSkills",
+      liveUrl: "https://www.eduupskills.com/",
       featured: false
     },
     {
       id: 4,
-      title: "Weather Forecast App",
-      description: "Beautiful weather application with location-based forecasts, interactive maps, and detailed weather information. Responsive design with smooth animations and modern UI.",
-      technologies: ["React", "Weather API", "Geolocation", "CSS3"],
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      githubUrl: "https://github.com/shubhamchahal/weather-app",
+      title: "Job Importer System",
+      description: "Scalable job import system with Node.js backend and React frontend. Features automated job fetching from external APIs, Redis queue management with BullMQ, MongoDB storage, cron scheduling for auto-imports, and visual import history dashboard with real-time logs.",
+      technologies: ["Node.js", "React", "MongoDB", "Redis", "BullMQ", "Tailwind CSS"],
+      image: JobImport,
+      githubUrl: "https://github.com/shubhamch95/job-importer",
       liveUrl: "https://weather-forecast-demo.netlify.app",
       featured: false
     }
@@ -67,12 +69,11 @@ export const ProjectsSection = () => {
                 display: project.featured ? 'grid' : 'block'
               }}
             >
-              {/* Project Image */}
               <div className="relative overflow-hidden rounded-xl">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-64 md:h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-64 md:h-80 object-cover object-top transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
@@ -89,7 +90,6 @@ export const ProjectsSection = () => {
                 </div>
               </div>
 
-              {/* Project Details */}
               <div className={`${project.featured ? 'p-8' : 'p-6'} space-y-4`}>
                 <div className="flex items-center justify-between">
                   <h3 className="text-2xl font-poppins font-semibold text-foreground">
@@ -118,17 +118,17 @@ export const ProjectsSection = () => {
                 </div>
 
                 <div className="flex gap-4 pt-4">
-                  <Button 
+                  {/* <Button 
                     variant="default" 
                     className="btn-premium"
                     onClick={() => window.open(project.liveUrl, '_blank')}
                   >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Live Demo
-                  </Button>
+                  </Button> */}
                   <Button 
                     variant="outline" 
-                    className="glass border-border hover:bg-accent/50"
+                    className="btn-premium"
                     onClick={() => window.open(project.githubUrl, '_blank')}
                   >
                     <Github className="h-4 w-4 mr-2" />
@@ -144,7 +144,7 @@ export const ProjectsSection = () => {
           <Button 
             variant="outline" 
             className="glass-card px-8 py-4"
-            onClick={() => window.open('https://github.com/shubhamchahal', '_blank')}
+            onClick={() => window.open('https://github.com/shubhamch95', '_blank')}
           >
             <Github className="h-5 w-5 mr-2" />
             View All Projects on GitHub

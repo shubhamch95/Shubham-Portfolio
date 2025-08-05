@@ -1,4 +1,4 @@
-import { Database, Server, Code, Smartphone, GitBranch, Container, Cloud, Zap } from "lucide-react";
+import { Database, Server, Code, GitBranch, Container, Cloud, Zap } from "lucide-react";
 
 export const TechStackSection = () => {
   const technologies = [
@@ -33,9 +33,9 @@ export const TechStackSection = () => {
       color: "text-blue-600"
     },
     {
-      name: "React Native",
-      icon: Smartphone,
-      category: "Mobile",
+      name: "Redis",
+      icon: Database,
+      category: "database",
       color: "text-purple-500"
     },
     {
@@ -72,7 +72,6 @@ export const TechStackSection = () => {
           </p>
         </div>
 
-        {/* Main Tech Stack - MERN */}
         <div className="mb-16 fade-in-up" style={{ animationDelay: '0.2s' }}>
           <h3 className="text-2xl font-poppins font-semibold text-center mb-8 text-gradient">
             Core MERN Stack
@@ -92,7 +91,6 @@ export const TechStackSection = () => {
           </div>
         </div>
 
-        {/* Additional Technologies */}
         <div className="fade-in-up" style={{ animationDelay: '0.4s' }}>
           <h3 className="text-2xl font-poppins font-semibold text-center mb-8">
             Additional Technologies & Tools
@@ -112,7 +110,6 @@ export const TechStackSection = () => {
           </div>
         </div>
 
-        {/* Skills Categories */}
         <div className="mt-16 fade-in-up" style={{ animationDelay: '0.6s' }}>
           <div className="grid md:grid-cols-4 gap-6">
             {categories.map((category, index) => (

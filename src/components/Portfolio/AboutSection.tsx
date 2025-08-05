@@ -1,4 +1,4 @@
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/portfolio.png";
 import { Code, Server, Database, Smartphone } from "lucide-react";
 
 export const AboutSection = () => {
@@ -17,11 +17,6 @@ export const AboutSection = () => {
       icon: Database,
       title: "Database Management",
       description: "MongoDB, PostgreSQL, Redis, Database Design"
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile & Responsive",
-      description: "React Native, Progressive Web Apps, Mobile-First Design"
     }
   ];
 
@@ -38,27 +33,26 @@ export const AboutSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Profile Image */}
+
           <div className="relative fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="relative">
               <img
                 src={profilePhoto}
-                alt="Shubham Chahal"
+                alt="Shubham Choudhery"
                 className="w-full max-w-lg mx-auto rounded-2xl shadow-glass"
               />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-secondary opacity-10"></div>
+              {/* <div className="absolute inset-0 rounded-2xl bg-gradient-secondary opacity-10"></div> */}
               <div className="absolute -top-4 -right-4 w-72 h-72 bg-secondary/20 rounded-full blur-3xl animate-glow"></div>
             </div>
           </div>
 
-          {/* Content */}
           <div className="space-y-8 fade-in-up" style={{ animationDelay: '0.4s' }}>
             <div className="glass-card">
               <h3 className="text-2xl font-poppins font-semibold mb-4 text-gradient">
                 Full-Stack MERN Developer
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                With over 3 years of experience in web development, I specialize in creating 
+                With over 2 years of experience in web development, I specialize in creating 
                 scalable, performant applications using the MERN stack. I'm passionate about 
                 clean code, modern development practices, and delivering solutions that exceed 
                 client expectations.
@@ -70,7 +64,6 @@ export const AboutSection = () => {
               </p>
             </div>
 
-            {/* Highlights Grid */}
             <div className="grid sm:grid-cols-2 gap-4">
               {highlights.map((item, index) => (
                 <div 

@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Portfolio Design System - Midnight Blue, Soft Gold, Off-White */
 
 @layer base {
   :root {
-    /* Base colors - Light mode */
+    
     --background: 0 0% 98%;
     --foreground: 220 30% 15%;
 
-    /* Premium color palette */
+   
     --midnight: 220 30% 15%;
     --midnight-light: 220 25% 25%;
     --midnight-lighter: 220 20% 35%;
@@ -23,7 +22,7 @@
     --soft-white: 0 0% 96%;
     --cream: 45 20% 95%;
 
-    /* Semantic tokens */
+    
     --primary: 220 30% 15%;
     --primary-foreground: 0 0% 98%;
     --primary-glow: 220 25% 25%;
@@ -51,24 +50,24 @@
     --input: 220 15% 92%;
     --ring: 220 30% 15%;
 
-    /* Glass effect variables */
+   
     --glass-bg: 255 255 255 / 0.1;
     --glass-border: 255 255 255 / 0.2;
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     
-    /* Gradients */
+    
     --gradient-primary: linear-gradient(135deg, hsl(var(--midnight)) 0%, hsl(var(--midnight-light)) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(var(--gold-dark)) 0%, hsl(var(--gold)) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(var(--midnight)) 0%, hsl(var(--midnight-light)) 50%, hsl(var(--midnight-lighter)) 100%);
     --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
     
-    /* Shadows */
+    
     --shadow-soft: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
     --shadow-medium: 0 8px 30px 0 rgba(0, 0, 0, 0.1);
     --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     --shadow-glow: 0 0 30px hsl(var(--secondary) / 0.3);
     
-    /* Animation variables */
+    
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
@@ -76,7 +75,7 @@
   }
 
   .dark {
-    /* Dark mode - Deeper midnight tones */
+    
     --background: 220 35% 8%;
     --foreground: 0 0% 98%;
 
@@ -111,12 +110,12 @@
     --input: 220 20% 22%;
     --ring: 45 85% 65%;
 
-    /* Dark mode glass effect */
+    
     --glass-bg: 0 0 0 / 0.2;
     --glass-border: 255 255 255 / 0.1;
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
     
-    /* Dark mode gradients */
+   
     --gradient-primary: linear-gradient(135deg, hsl(var(--midnight)) 0%, hsl(var(--midnight-light)) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(var(--gold-dark)) 0%, hsl(var(--gold)) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(var(--midnight)) 0%, hsl(var(--midnight-light)) 50%, hsl(var(--midnight-lighter)) 100%);
@@ -141,7 +140,7 @@
 }
 
 @layer components {
-  /* Glassmorphism component styles */
+ 
   .glass {
     background: var(--gradient-glass);
     backdrop-filter: blur(16px);
@@ -160,7 +159,7 @@
     box-shadow: var(--shadow-glass), var(--shadow-glow);
   }
   
-  /* Premium button styles */
+  
   .btn-premium {
     @apply relative overflow-hidden rounded-full px-8 py-4 font-semibold;
     background: var(--gradient-secondary);
@@ -189,7 +188,7 @@
     left: 100%;
   }
   
-  /* Text gradients */
+ 
   .text-gradient {
     background: var(--gradient-secondary);
     -webkit-background-clip: text;
@@ -197,12 +196,12 @@
     -webkit-text-fill-color: transparent;
   }
   
-  /* Section spacing */
+  
   .section-padding {
     @apply py-20 px-4 md:px-8 lg:px-16;
   }
   
-  /* Scroll animations */
+  
   .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
@@ -214,7 +213,7 @@
     transform: translateY(0);
   }
   
-  /* Tech stack grid */
+  
   .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -230,7 +229,7 @@
     justify-content: center;
   }
   
-  /* Project cards */
+  
   .project-card {
     @apply glass-card;
     position: relative;
@@ -253,12 +252,12 @@
     transform: scaleX(1);
   }
   
-  /* Utility classes */
+  
   .text-balance {
     text-wrap: balance;
   }
   
-  /* Dark mode specific adjustments */
+  
   .dark .glass {
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -270,12 +269,12 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
-  /* Smooth scrolling for all browsers */
+  
   * {
     scroll-behavior: smooth;
   }
   
-  /* Selection styling */
+  
   ::selection {
     background: hsl(var(--secondary) / 0.3);
     color: hsl(var(--secondary-foreground));

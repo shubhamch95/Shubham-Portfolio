@@ -9,7 +9,6 @@ import { ThemeProvider } from "@/components/Portfolio/ThemeProvider";
 
 const Portfolio = () => {
   useEffect(() => {
-    // Intersection Observer for scroll animations
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -23,7 +22,6 @@ const Portfolio = () => {
       });
     }, observerOptions);
 
-    // Observe all fade-in-up elements
     const fadeElements = document.querySelectorAll('.fade-in-up');
     fadeElements.forEach((el) => observer.observe(el));
 
@@ -42,12 +40,11 @@ const Portfolio = () => {
           <ContactSection />
         </main>
         
-        {/* Footer */}
         <footer className="border-t border-border bg-background/50 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
             <div className="text-center">
               <p className="text-muted-foreground">
-                © 2024 Shubham Chahal. Crafted with ❤️ using React, TypeScript & Tailwind CSS.
+                © 2025 Shubham Choudhery. Crafted with ❤️
               </p>
             </div>
           </div>

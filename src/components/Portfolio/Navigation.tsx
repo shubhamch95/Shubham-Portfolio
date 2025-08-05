@@ -40,18 +40,17 @@ export const Navigation = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+
           <div className="flex-shrink-0">
             <a 
               href="#" 
               onClick={(e) => { e.preventDefault(); scrollToSection('#'); }}
               className="text-2xl font-poppins font-bold text-gradient"
             >
-              Shubham Chahal
+              Shubham Choudhery
             </a>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
@@ -67,7 +66,6 @@ export const Navigation = () => {
             </div>
           </div>
 
-          {/* Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <Button
               variant="ghost"
@@ -80,7 +78,6 @@ export const Navigation = () => {
               <span className="sr-only">Toggle theme</span>
             </Button>
 
-            {/* Mobile menu button */}
             <div className="md:hidden">
               <Button
                 variant="ghost"
@@ -98,7 +95,6 @@ export const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 glass rounded-b-xl">
